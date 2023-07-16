@@ -1,4 +1,5 @@
 // El styles lo importamos aquí, ya se carga después al compilar todo
+import { createLogger } from 'vite';
 import '../scss/styles.scss';
 
 // generar números aleatorios, que los vaya devolviendo, etc
@@ -29,3 +30,6 @@ import '../scss/styles.scss';
 
 // Cada vez que busquemos coincidencias comprobar si ya están todos marcados o no, si ya se han marcado todos, el juego termina y gana el jugador que haya completado el cartón antes.
 
+const randomNumbers = Math.floor(Math.random()*99)
+
+console.log(randomNumbers)
