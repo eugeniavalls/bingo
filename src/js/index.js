@@ -1,5 +1,5 @@
 // El styles lo importamos aquí, ya se carga después al compilar todo
-import { createLogger } from 'vite';
+
 import '../scss/styles.scss';
 
 // generar números aleatorios, que los vaya devolviendo, etc
@@ -30,6 +30,36 @@ import '../scss/styles.scss';
 
 // Cada vez que busquemos coincidencias comprobar si ya están todos marcados o no, si ya se han marcado todos, el juego termina y gana el jugador que haya completado el cartón antes.
 
-const randomNumbers = Math.floor(Math.random()*99)
 
-console.log(randomNumbers)
+const buttonStart = document.getElementById('button-start');
+const mainElement = document.getElementById('main');
+const numbersElement = document.getElementById('numbers');
+const numberElement = document.getElementById('number');
+const cardboardsElement = document.getElementById('cardboards');
+const cardboardUser = document.getElementById('cardboard-user');
+const cardboardPc = document.getElementById('cardboard-pc'); 
+
+
+const randomNumbers = Math.floor(Math.random()*99);
+
+let arrayNumbersCardboard = [];
+
+const randomNumbersCardboards = Math.floor(Math.random()*15);
+
+
+
+// const insertArray = () => {
+  
+//     const fragment = document.createDocumentFragment();
+//     arrayNumbersCardboard.forEach(task => {
+//       const newTask = generateHtmlForTask(task);
+//       fragment.append(newTask);
+//     });
+  
+//     tasksElement.append(fragment);
+//   };
+  
+//   const saveTask = task => {
+//     arrayNumbersCardboard.push(task);
+//     insertArray();
+//   };
