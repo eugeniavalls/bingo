@@ -38,6 +38,8 @@ const cardboardsElement = document.getElementById('cardboards');
 const cardboardUser = document.getElementById('cardboard-user');
 const cardboardPc = document.getElementById('cardboard-pc');
 const counterElement = document.getElementById('counter');
+const playersUser = document.getElementById('players-user');
+const playersPc = document.getElementById('players-pc')
 
 const randomNumbers = Math.floor(Math.random() * 99);
 
@@ -80,12 +82,14 @@ const paintedNumbers = randomNumber => {
   selectedNumber.classList.add('painted-number');
 };
 
-const painteNumbersCardboards = randomNumber => {
-  const selectNumberCardboard = cardboardUser.querySelector(
-    `[data-number="${randomNumber}"]`
-  );
-  selectNumberCardboard.classList.add('number-correct');
-};
+// const painteNumbersCardboards = randomNumber => {
+//   const selectNumberCardboard = cardboardUser.querySelector(
+//     `[data-number="${randomNumber}"]`
+//   );
+//   selectNumberCardboard.classList.add('number-correct');
+// };
+
+// setInterval(painteNumbersCardboards, 800)
 
 const getRandomNumber = () => {
   const randomPosition = Math.floor(Math.random() * array99numbers.length);
@@ -95,4 +99,24 @@ const getRandomNumber = () => {
   paintedNumbers(randomNumber);
 };
 
-setInterval(getRandomNumber, 1000);
+setInterval(getRandomNumber, 800);
+
+// Cada vez que busquemos coincidencias comprobar si ya están todos marcados o no, si ya se han marcado todos, el juego termina y gana el jugador que haya completado el cartón antes.
+
+const playerWin = () =>{
+    if (arrayNumbersCardboard.length === 15){
+        playersUser.textContent = 'Player User: WINNER'
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

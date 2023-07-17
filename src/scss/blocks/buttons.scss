@@ -2,3 +2,8 @@
     padding: 15px 30px;
     border-radius: 50px;
 }
+
+.button--disabled{
+        background-color: var(--color-cardboard);
+        color: var(--color-white);
+}
