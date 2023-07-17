@@ -1,41 +1,39 @@
 /* ESTILOS DEL MAIN */
 
-.main{
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
 }
-.numbers{
-    display: grid;
-    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
-    justify-content: center;
-    align-items: center;
-    border: 8px solid var(--color-bingo);
-    border-radius: 10px;
-    padding: 0.5rem;
-    // background-color: white;
-    gap: 0.3rem;
-
-}
-
-.number{
-    padding: 0.5rem;
-    text-align: center;
-    border: 2px solid var(--color-bingo);
-    border-radius: 5px;
-    margin: 0;
-    font-size: 30px;
+.numbers {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid var(--color-bingo);
+  border-radius: 10px;
+  padding: 0.5rem;
+  // background-color: white;
+  gap: 0.3rem;
 }
 
-.painted-number{
-    background-color: var(--color-bingo);
-    color: var(--color-white);
-    border: 1px solid var(--color-white);
-    border-radius: 5px;
-    margin: 1px;
-    // background-image: url(/src/assets/images/fondo-bola.png);
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;   
+.number {
+  padding: 0.5rem;
+  text-align: center;
+  border: 2px solid var(--color-bingo);
+  border-radius: 5px;
+  margin: 0;
+  font-size: 30px;
 }
 
+.painted-number {
+  background-color: var(--color-bingo);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: 5px;
+  margin: 1px;
+  //   background-image: url(/assets/images/fondo-bola.png);
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   background-size: 35px;
+}

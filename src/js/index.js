@@ -30,36 +30,69 @@ import '../scss/styles.scss';
 
 // Cada vez que busquemos coincidencias comprobar si ya están todos marcados o no, si ya se han marcado todos, el juego termina y gana el jugador que haya completado el cartón antes.
 
-
 const buttonStart = document.getElementById('button-start');
 const mainElement = document.getElementById('main');
 const numbersElement = document.getElementById('numbers');
 const numberElement = document.getElementById('number');
 const cardboardsElement = document.getElementById('cardboards');
 const cardboardUser = document.getElementById('cardboard-user');
-const cardboardPc = document.getElementById('cardboard-pc'); 
+const cardboardPc = document.getElementById('cardboard-pc');
+const counterElement = document.getElementById('counter');
 
+const randomNumbers = Math.floor(Math.random() * 99);
 
-const randomNumbers = Math.floor(Math.random()*99);
+const getNumbersToFillBoard = () => {
+  let arrayNumbersCardboard = [];
 
-let arrayNumbersCardboard = [];
+  while (arrayNumbersCardboard.length < 15) {
+    const randomNumbersCardboards = Math.floor(Math.random() * 99 + 1);
+    if (!arrayNumbersCardboard.includes(randomNumbersCardboards)) {
+      arrayNumbersCardboard.push(randomNumbersCardboards);
+    }
+  }
 
-const randomNumbersCardboards = Math.floor(Math.random()*15);
+  return arrayNumbersCardboard;
+};
 
+const cardboards = board => {
+  const numbersBoard = getNumbersToFillBoard();
+  numbersBoard.forEach(number => {
+    const numberCardboard = document.createElement('p');
+    numberCardboard.textContent = number;
+    numberCardboard.dataset.number = number;
+    numberCardboard.classList.add('cardboard-number');
 
+    board.append(numberCardboard);
+  });
+};
 
-// const insertArray = () => {
-  
-//     const fragment = document.createDocumentFragment();
-//     arrayNumbersCardboard.forEach(task => {
-//       const newTask = generateHtmlForTask(task);
-//       fragment.append(newTask);
-//     });
-  
-//     tasksElement.append(fragment);
-//   };
-  
-//   const saveTask = task => {
-//     arrayNumbersCardboard.push(task);
-//     insertArray();
-//   };
+cardboards(cardboardUser);
+cardboards(cardboardPc);
+
+let array99numbers = Array(99)
+  .fill()
+  .map((_, index) => index + 1);
+
+const paintedNumbers = randomNumber => {
+  const selectedNumber = document.querySelector(
+    `[data-number="${randomNumber}"]`
+  );
+  selectedNumber.classList.add('painted-number');
+};
+
+const painteNumbersCardboards = randomNumber => {
+  const selectNumberCardboard = cardboardUser.querySelector(
+    `[data-number="${randomNumber}"]`
+  );
+  selectNumberCardboard.classList.add('number-correct');
+};
+
+const getRandomNumber = () => {
+  const randomPosition = Math.floor(Math.random() * array99numbers.length);
+  const randomNumber = array99numbers[randomPosition];
+  array99numbers = array99numbers.filter(number => number !== randomNumber);
+  counterElement.textContent = `Number: ${randomNumber}`;
+  paintedNumbers(randomNumber);
+};
+
+setInterval(getRandomNumber, 1000);
