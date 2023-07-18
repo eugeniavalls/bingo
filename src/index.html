@@ -15,7 +15,8 @@
   <body>
     <header class="header">
       <h1 class="title">BINGO</h1>
-      <button class="button-start " id="button-start">START GAME</button>
+      <button class="button-start" id="button-start">START GAME</button>
+      <button class="hidden" id="button-restart">RESTART GAME</button>
     </header>
     <div class="counter">
       <span id="counter">Number: 56</span>
@@ -32,7 +33,6 @@
         <p class="number" id="number" data-number="8">8</p>
         <p class="number" id="number" data-number="9">9</p>
         <p class="number" id="number" data-number="10">10</p>
-        <!-- <p class="number painted-number" id="number">11</p> -->
         <p class="number" id="number" data-number="11">11</p>
         <p class="number" id="number" data-number="12">12</p>
         <p class="number" id="number" data-number="13">13</p>
@@ -126,43 +126,9 @@
 
       <div class="cardboards" id="cardboards">
         <p class="players" id="players-user">Player User</p>
-        <div class="cardboard" id="cardboard-user">
-          <!-- <p class="cardboard-number " > 1</p>
-          <p class="cardboard-number " > 2</p>
-          <p class="cardboard-number " > 3</p>
-          <p class="cardboard-number " > 4</p>
-
-          <p class="cardboard-number number-correct " > 5</p>
-
-          <p class="cardboard-number  " > 6</p>
-          <p class="cardboard-number  " > 7</p>
-          <p class="cardboard-number  " > 8</p>
-          <p class="cardboard-number  " > 9</p>
-          <p class="cardboard-number  " > 10</p>
-          <p class="cardboard-number  " > 11</p>
-          <p class="cardboard-number  " > 12</p>
-          <p class="cardboard-number  " > 13</p>
-          <p class="cardboard-number  " > 14</p>
-          <p class="cardboard-number  " > 15</p> -->
-        </div>
+        <div class="cardboard" id="cardboard-user"></div>
         <p class="players" id="players-pc">Player PC</p>
-        <div class="cardboard" id="cardboard-pc">
-          <!-- <p class="cardboard-number " > 1</p>
-          <p class="cardboard-number " > 2</p>
-          <p class="cardboard-number " > 3</p>
-          <p class="cardboard-number " > 4</p>
-          <p class="cardboard-number " > 5</p>
-          <p class="cardboard-number " > 6</p>
-          <p class="cardboard-number " > 7</p>
-          <p class="cardboard-number " > 8</p>
-          <p class="cardboard-number " > 9</p>
-          <p class="cardboard-number " > 10</p>
-          <p class="cardboard-number " > 11</p>
-          <p class="cardboard-number " > 12</p>
-          <p class="cardboard-number " > 13</p>
-          <p class="cardboard-number " > 14</p>
-          <p class="cardboard-number " > 15</p> -->
-        </div>
+        <div class="cardboard" id="cardboard-pc"></div>
       </div>
     </main>
 
