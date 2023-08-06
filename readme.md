@@ -1,6 +1,6 @@
 # BINGO. PRÁCTICA CON JAVASCRIPT
 
-![Imagen del proyecto](https://raw.githubusercontent.com/eugeniavalls/practica7-puente/main/src/assets/screenshots/01.png)
+![Imagen del proyecto](https://raw.githubusercontent.com/eugeniavalls/ejercicio-bingo/main/screenshots/01.png)
 
 ## Ejemplo en vivo
 
